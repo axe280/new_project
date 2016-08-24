@@ -1,0 +1,120 @@
+/*----------- Typography *
+ ------------------------------------------------------------*/
+*
+  -webkit-box-sizing: border-box
+  -moz-box-sizing: border-box
+  box-sizing: border-box
+
+body
+  background-color: #fff
+  font: $site-text-size $site-font-family, Arial, sans-serif
+  line-height: 20px
+  color: $site-text-color
+  margin: 0
+  padding: 0
+  width: 100%
+
+h1, .site-h1-tt, h2, .site-h2-tt, h3, .site-h3-tt, h4, .site-h4-tt, h5, .site-h5-tt
+  display: block
+  font-family: Tahoma, Arial, sans-serif
+  line-height: 1.1em
+  color: $site-title-color
+  margin: 20px 0
+
+h1, .site-h1-tt
+  font-size: $site-h1-size-mobile
+h2, .site-h2-tt
+  font-size: $site-h2-size-mobile
+h3, .site-h3-tt
+  font-size: $site-h3-size-mobile
+h4, .site-h4-tt
+  font-size: $site-h4-size-mobile
+h5, .site-h5-tt
+  font-size: $site-h5-size-mobile
+
+.text-center
+  text-align: center
+.text-left
+  text-align: left
+.text-right
+  text-align: right
+.text-uppercase
+  text-transform: uppercase
+
+p
+  margin: 20px 0
+  padding: 0
+ul, ol
+  padding: 0
+  margin: 20px 0
+  li
+    margin: 10px 0
+img
+  vertical-align: middle
+  max-width: 100%
+
+a
+  color: $color-link
+  text-decoration: none
+  &:hover
+    text-decoration: underline
+    color: $color-h-link
+
+
+table, .table
+  display: table
+  width: 100%
+  border-collapse: collapse
+  border: 1px solid $table-border-color
+  margin: 20px 0
+  text-align: center
+  rt, .tr
+    display: table-row
+  th, td,
+  .th, .td
+    display: table-cell
+    border-collapse: collapse
+    vertical-align: middle
+    padding: 10px
+    border: 1px solid
+  th, .th
+    background-color: $table-th-bg-color
+    border-color: $table-th-border-color
+  td, .td
+    background-color: $table-td-bg-color
+    border-color: $table-td-border-color
+
+
+.icon
+  display: inline-block
+  vertical-align: middle
+  margin: 0 3px
+
+
+
+
+
+
+
+
+@media only screen and (min-width: 768px)
+  h1, .site-h1-tt
+    font-size: $site-h1-size
+  h2, .site-h2-tt
+    font-size: $site-h2-size
+  h3, .site-h3-tt
+    font-size: $site-h3-size
+  h4, .site-h4-tt
+    font-size: $site-h4-size
+  h5, .site-h5-tt
+    font-size: $site-h5-size
+
+
+
+
+
+
+
+
+
+
