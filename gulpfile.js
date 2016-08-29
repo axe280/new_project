@@ -11,6 +11,11 @@ var gulp = require('gulp'),
     rimraf = require('rimraf'),
     browserSync = require("browser-sync"),
     spritesmith = require('gulp.spritesmith'),
+    wiredep = require('wiredep').stream,
+    minifyCss = require('gulp-minify-css'),
+    sftp = require('gulp-sftp'),
+    useref = require('gulp-useref'),
+    gulpif = require('gulp-if'),
     reload = browserSync.reload;
 
 
@@ -24,7 +29,7 @@ var path = {
     },
     src: {
         html: 'src/*.html',
-        js: 'src/js/*.js',
+        js: 'src/js/**/*.*',
         style: 'src/style/main.sass',
         img: 'src/img/*.*',
         fonts: 'src/fonts/**/*.*'
@@ -38,6 +43,18 @@ var path = {
     },
     clean: './build'
 };
+
+
+gulp.task('sftp', function () {
+    return gulp.src('build/index.html')
+        .pipe(sftp({
+            host: 'axe280.ftp.ukraine.com.ua',
+            port: 21,
+            user: 'axe280_admin',
+            pass: 'a96sh6v0',
+            remotePath: 'home/axe280/axedevelop.com.ua/www/work/test'
+        }));
+});
 
 
 var config = {
@@ -76,9 +93,25 @@ gulp.task('clean', function (cb) {
     rimraf(path.clean, cb);
 });
 
+gulp.task('bower', function () {
+  gulp.src('./src/*.html')
+    .pipe(wiredep({
+      directory : 'bower_components'
+    }))
+    .pipe(gulp.dest('./src'));
+});
+
+gulp.task('bowermin', function () {
+  gulp.src('./src/*.html')
+    .pipe(useref())
+    .pipe(gulpif('*.css', minifyCss()))
+    .pipe(gulpif('*.js', uglify()))
+    .pipe(gulp.dest('./src'));
+});
+
 
 gulp.task('html:build', function () {
-    gulp.src(path.src.html) 
+    gulp.src(path.src.html)
         .pipe(rigger())
         .pipe(gulp.dest(path.build.html))
         .pipe(reload({stream: true}));
