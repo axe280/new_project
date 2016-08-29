@@ -13,7 +13,6 @@ var gulp = require('gulp'),
     spritesmith = require('gulp.spritesmith'),
     wiredep = require('wiredep').stream,
     minifyCss = require('gulp-minify-css'),
-    sftp = require('gulp-sftp'),
     useref = require('gulp-useref'),
     gulpif = require('gulp-if'),
     reload = browserSync.reload;
@@ -43,18 +42,6 @@ var path = {
     },
     clean: './build'
 };
-
-
-gulp.task('sftp', function () {
-    return gulp.src('build/index.html')
-        .pipe(sftp({
-            host: 'axe280.ftp.ukraine.com.ua',
-            port: 21,
-            user: 'axe280_admin',
-            pass: 'a96sh6v0',
-            remotePath: 'home/axe280/axedevelop.com.ua/www/work/test'
-        }));
-});
 
 
 var config = {
