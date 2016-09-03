@@ -81,19 +81,19 @@ gulp.task('clean', function (cb) {
 });
 
 gulp.task('bower', function () {
-  gulp.src('./src/*.html')
+  gulp.src('./src/template/*.html')
     .pipe(wiredep({
       directory : 'bower_components'
     }))
-    .pipe(gulp.dest('./src'));
+    .pipe(gulp.dest('./src/template'));
 });
 
 gulp.task('bowermin', function () {
-  gulp.src('./src/*.html')
+  gulp.src('./src/template/*.html')
     .pipe(useref())
     .pipe(gulpif('*.css', minifyCss()))
     .pipe(gulpif('*.js', uglify()))
-    .pipe(gulp.dest('./src'));
+    .pipe(gulp.dest('./src/template'));
 });
 
 
