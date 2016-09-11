@@ -15,6 +15,9 @@ var gulp = require('gulp'),
     minifyCss = require('gulp-minify-css'),
     useref = require('gulp-useref'),
     gulpif = require('gulp-if'),
+    svgstore = require('gulp-svgstore'),
+    svgmin = require('gulp-svgmin'),
+    rename = require('gulp-rename'),
     reload = browserSync.reload;
 
 
@@ -57,7 +60,7 @@ var config = {
 gulp.task('sprite', function () {
   var spriteData = gulp.src('src/img/icon/*.png').pipe(spritesmith({
     imgName: 'sprite.png',
-    cssName: '_sprite.sass',
+    cssName: '_sprite-mixins.sass',
     padding: 2
   }));
 
@@ -68,6 +71,16 @@ gulp.task('sprite', function () {
     .pipe(gulp.dest('src/style/helpers/'));
  
   return merge(imgStream, cssStream);
+});
+
+
+gulp.task('svgsprite', function () {
+  return gulp
+    .src('src/img/svg/**/*.*')
+    .pipe(svgmin())
+    .pipe(svgstore())
+    .pipe(rename({basename: 'sprite_svg'}))
+    .pipe(gulp.dest('./src/img'));
 });
 
 

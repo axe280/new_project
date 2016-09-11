@@ -1,2 +1,10 @@
 /*----------- Fonts *
  ------------------------------------------------------------*/
+
+@font-face {
+  font-family: "rouble";
+  src: url("../fonts/rouble.eot");
+  src: url("../fonts/rouble.eot?#iefix") format("embedded-opentype"), url("../fonts/rouble.woff") format("woff"), url("../fonts/rouble.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
