@@ -2,37 +2,47 @@
  ------------------------------------------------------------*/
 .menu-open-wrapper-page
   overflow: hidden
-
-.head-menu
-  position: relative
+  position: fixed
+  height: 100%
+  width: 100%
+  top: 0
+  left: 0
+  #wrapper
+    position: absolute
+    top: 0
+    left: 100%
+    margin-left: -60px
 
 .menu-icon
-  width: 30px
   display: block
   cursor: pointer
   position: absolute
-  left: 0px
+  left: 15px
   top: 15px
-  transition: left .2s ease-out
   span
     display: block
+    width: 30px
     height: 4px
     background-color: #000
     margin-bottom: 3px
     border-radius: 1px
 
-.menu-wrapper
+.menu-wrapper-fixed
   left: -100%
   position: fixed
   top: 0
-  transition: left .2s ease-out
+  transition: left 0.2s linear, padding-right 0.2s linear
   z-index: 100
   height: 100%
   width: 100%
   overflow: auto
+  padding-right: 60px
+
+.menu-open-wrapper
   background-color: rgba(0, 0, 0, .8)
   padding: 15px 20px
-  margin-bottom: 0px
+  height: 100%
+  overflow: auto
 
 .menu
   margin-bottom: 0
@@ -41,20 +51,50 @@
     list-style-type: none
     >a
       color: #fff
+      text-transform: uppercase
+
+.menu-drop-down
+  position: relative
+  >span
+    color: #fff
+    text-transform: uppercase
+    cursor: pointer
+  >ul
+    display: none
+  &:hover
+    >ul
+      display: block
+      padding: 5px 10px 0
+      >li
+        >a
+          color: #fff
+    .arrow-corner-bottom
+      +corner-top
+      border-bottom-color: #ccc
+
+.arrow-corner-bottom
+  +corner-bottom
+  border-top-color: #ccc
+
 
 .menu-open
-  .menu-wrapper
+  .menu-wrapper-fixed
     left: 0
   .menu-icon
     position: fixed
-    left: auto
     left: 100%
-    margin-left: -50px
-    top: 15px
+    top: 0
     z-index: 101
+    margin-left: -60px
+    width: 60px
+    height: 100%
+    padding: 15px
+    transition: left 0.2s linear, margin 0.2s linear
     span
-      background-color: #fff
+      background-color: #000
 
+
+//bread crumbs
 .bread-crumbs
   li
     list-style-type: none
@@ -66,23 +106,86 @@
       &:before
 
 
+@media only screen and (min-width: 768px)
+  .menu-open-wrapper-page
+    #wrapper
+      margin-left: -100px
+
+  .menu-wrapper-fixed
+    padding-right: 100px
+
+  .menu-open
+    .menu-icon
+      margin-left: -100px
+      width: 100px
 
 
-@media only screen and (min-width: 960px)
+
+@media only screen and (min-width: 980px)
+  .menu-open-wrapper-page
+    overflow: visible
+    position: relative
+    height: auto
+    width: auto
+    top: 0
+    left: 0
+    #wrapper
+      position: relative
+      left: 0
+      top: 0
+      margin: 0
+      transition: none
+
+  .menu-wrapper-fixed
+    position: relative
+    left: 0
+    top: 0
+    height: auto
+    overflow: visible
+    padding-right: 0
+    transition: none
+
+  .menu-open-wrapper
+    background: none
+    padding: 0
+    height: auto
+    overflow: visible
+
+
   .menu-icon
     display: none
+
   .menu
     left: 0
     position: relative
     text-align: center
+    background-color: #aaa
     >li
       display: inline-block
       vertical-align: middle
-      font-size: 22px
-      line-height: 22px
-      margin: 0 30px
-      >a
+      margin: 0
+      &:hover
+        >a, span
+          background-color: #f7f7f7
+      >a, >span
         color: #000
+        display: block
+        line-height: 40px
+        font-size: 16px
+        padding: 0 20px
+        &:hover
+          text-decoration: none
+
+
+  .menu-drop-down
+    &:hover
+      >ul
+        position: absolute
+        top: 100%
+        width: 150px
+        text-align: left
+        background-color: #000
+        padding: 10px 15px
 
   
 

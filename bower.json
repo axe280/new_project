@@ -3,6 +3,9 @@
   "version": "0.0.0",
   "dependencies": {
     "normalize.css": "*",
-    "jquery": "2.*"
+    "jquery": "2.*",
+    "nouislider": "^9.0.0",
+    "owl.carousel": "^2.2.0",
+    "jcf": "^1.2.3"
   }
 }
