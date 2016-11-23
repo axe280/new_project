@@ -2,6 +2,36 @@ jQuery(function($){
 
   $('input[placeholder], textarea[placeholder]').placeholder();
 
+
+  // add-open-class
+  $('.menu-icon').click(function(){
+   if($(this).parent().is('.menu-open')){
+     $(this).parent().removeClass('menu-open');
+     $('body').removeClass('menu-open-wrapper-page');
+   }else{
+     $(this).parent().addClass('menu-open');
+     $('body').addClass('menu-open-wrapper-page');
+   }
+  });
+
+
+  //modal window
+  $('.open-popup-link').magnificPopup({
+    type:'inline',
+    midClick: true
+  });
+
+
+  $('.carousel-st').owlCarousel({
+    loop: true,
+    nav: true,
+    dots: true,
+    items: 1,
+    autoplay: false,
+    autoplayTimeout: 5000,
+    mouseDrag: false
+  });
+
 });
 
 
