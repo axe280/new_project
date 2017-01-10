@@ -14,23 +14,15 @@ jQuery(function($){
    }
   });
 
-
-  //modal window
-  $('.open-popup-link').magnificPopup({
-    type:'inline',
-    midClick: true
+  // add-open-class
+  $('.menu-dd-open-link').click(function(){
+   if($(this).parent().is('.menu-dd-open')){
+    $(this).parent().removeClass('menu-dd-open');
+   }else{
+    $(this).parent().addClass('menu-dd-open');
+   }
   });
 
-
-  $('.carousel-st').owlCarousel({
-    loop: true,
-    nav: true,
-    dots: true,
-    items: 1,
-    autoplay: false,
-    autoplayTimeout: 5000,
-    mouseDrag: false
-  });
 
 });
 
