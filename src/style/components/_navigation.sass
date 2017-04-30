@@ -1,5 +1,4 @@
-/*----------- Navigation *
- ------------------------------------------------------------*/
+/* ------------------- Navigation */
 .menu-open-wrapper-page
   overflow: hidden
   position: fixed
@@ -10,40 +9,61 @@
   #wrapper
     position: absolute
     top: 0
-    left: 100%
-    margin-left: -60px
+    left: 260px
+    z-index: 2
   .footer
-    display: none
+    opacity: 0
+    margin-left: 260px
 
-.menu-icon
+.menu-icon-wrap
   display: block
   cursor: pointer
   position: absolute
+  left: 0
+  top: 0
+  width: 100%
+  text-align: right
+  z-index: 101
+
+.menu-icon
+  width: 34px
+  position: absolute
   left: 15px
-  top: 15px
+  top: 20px
+  z-index: 101
+  padding: 8px 0
   span
     display: block
-    width: 30px
-    height: 4px
+    height: 3px
     background-color: #000
-    margin-bottom: 3px
-    border-radius: 1px
+    position: relative
+    &:before,
+    &:after
+      content: ' '
+      position: absolute
+      left: 0
+      height: 3px
+      background-color: #000
+      width: 100%
+    &:before
+      top: -8px
+    &:after
+      bottom: -8px
+
 
 .menu-wrapper-fixed
-  left: -100%
+  left: -260px
   position: fixed
   top: 0
-  min-width: 240px
-  transition: left 0.2s linear, padding-right 0.2s linear
+  transition: left 0.2s linear
   z-index: 100
   height: 100%
-  width: 100%
-  overflow: auto
-  padding-right: 60px
+  min-width: 260px
+  width: 260px
 
 .menu-open-wrapper
   background-color: #030101
-  padding: 25px
+  padding: 20px
   height: 100%
   overflow: auto
 
@@ -52,119 +72,117 @@
   padding: 0
   list-style: none
   >li
-    margin: 0 0 5px
+    margin: 15px 0
     padding: 0
     list-style-type: none
-    font-size: 13px
-    font-weight: 700
+    font-size: 20px
+    line-height: 24px
     color: #fff
     >a
       color: #fff
       text-decoration: none
-      text-transform: uppercase
       &:hover
         text-decoration: underline
 
+
+/* ------------------- menu drop down */
 .menu-dd-open-link
   color: #fff
-  text-transform: uppercase
   display: inline-block
-  vertical-align: middle
+  vertical-align: top
   cursor: pointer
+  +select-text-none
   >span
     display: inline-block
-    vertical-align: middle
+    vertical-align: top
 
 .menu-drop-down
   position: relative
   >ul
     display: none
     margin: 0
-    padding: 5px 0
+    padding: 5px 0 0
     list-style: none
     >li
-      font-weight: 700
       padding-left: 15px
-      line-height: 23px
+      line-height: 20px
+      margin: 10px 0
       position: relative
       >a
         color: #fff
         text-decoration: none
-        font-weight: 400
-        font-size: 14px
+        font-size: 18px
         &:hover
           text-decoration: underline
-  ul ul
-    list-style: none
-    padding: 0 0 0 15px
-    margin: 0 0 10px
-    li
-      a
-        font-size: 14px
-        text-decoration: none
-        color: #fff
-        font-weight: 400
-        &:hover
-          text-decoration: underline
-
 
 .menu-dd-open
   >ul
     display: block
   .arrow-corner-bottom
-    +corner-top(4px, 4px, 4px, #fff)
+    +corner-top(6px, 6px, 6px, #fff)
     border-bottom-color: #fff
+    margin-left: 5px
 
 .arrow-corner-bottom
-  +corner-bottom(4px, 4px, 4px, #fff)
+  +corner-bottom(6px, 6px, 6px, #fff)
   border-top-color: #fff
+  margin-left: 5px
 
 
-.menu-open
+
+/* ------------------- menu open mobile */
+.menu-mobile-open
   .menu-wrapper-fixed
     left: 0
-  .menu-icon
+  .menu-icon-wrap
     position: fixed
-    left: 100%
+    left: 260px
     top: 0
-    z-index: 101
-    margin-left: -60px
-    width: 60px
+    width: 100%
     height: 100%
-    padding: 15px
-    background-color: rgba(255, 255, 255, 0.5)
-    transition: left 0.2s linear, margin 0.2s linear
+    padding: 15px 13px
+    background-color: rgba(255, 255, 255, 0.7)
+    transition: background 0.2s linear, left 0.2s linear
+  .menu-icon
+    left: 13px
+    top: 20px
+    background: none
     span
-      background-color: #000
-
-
-//bread crumbs
-.bread-crumbs
-  li
-    list-style-type: none
-    display: inline-block
-    vertical-align: middle
-    &:before
-      content: '/ '
-    &:first-child
+      background: none
+      &:before,
+      &:after
+        transition: transform 0.2s linear
+        transform-origin: 50% 50%
       &:before
+        top: 0
+        transform: rotate(45deg)
+      &:after
+        bottom: 0
+        transform: rotate(-45deg)
 
 
-@media only screen and (min-width: 768px)
+
+/* Min width 480 pixels */
+@media only screen and (min-width: 480px)
   .menu-open-wrapper-page
     #wrapper
-      margin-left: -100px
+      left: 360px
+    .footer
+      margin-left: 360px
 
   .menu-wrapper-fixed
-    padding-right: 100px
+    left: -360px
+    width: 360px
+    min-width: 360px
 
-  .menu-open
-    .menu-icon
-      margin-left: -100px
-      width: 100px
+  .menu-mobile-open
+    .menu-icon-wrap
+      left: 360px
+  /* end media min width 480 pexels */
 
 
 
+/* Min width 980 pixels */
 @media only screen and (min-width: 980px)
   .menu-open-wrapper-page
     overflow: visible
@@ -180,16 +198,16 @@
       margin: 0
       transition: none
     .footer
-      display: block
+      margin-left: 0
+      opacity: 1
 
   .menu-wrapper-fixed
     position: relative
     left: 0
     top: 0
     height: auto
-    overflow: visible
-    padding-right: 0
     transition: none
+    width: 100%
 
   .menu-open-wrapper
     background: none
@@ -197,7 +215,7 @@
     height: auto
     overflow: visible
 
-  .menu-icon
+  .menu-icon-wrap
     display: none
 
   .menu
@@ -209,6 +227,7 @@
       margin: 0
 
 
+  /* ------------------- menu drop down */
   .menu-drop-down
     &:hover
       >ul
@@ -225,4 +244,5 @@
   .menu-dd-open
     >ul
       display: none
+  /* end media min width 980 pexels */
 

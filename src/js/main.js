@@ -4,12 +4,12 @@ jQuery(function($){
 
 
   // add-open-class
-  $('.menu-icon').click(function(){
-   if($(this).parent().is('.menu-open')){
-     $(this).parent().removeClass('menu-open');
+  $('.menu-icon-wrap').click(function(){
+   if($(this).parent().is('.menu-mobile-open')){
+     $(this).parent().removeClass('menu-mobile-open');
      $('body').removeClass('menu-open-wrapper-page');
    }else{
-     $(this).parent().addClass('menu-open');
+     $(this).parent().addClass('menu-mobile-open');
      $('body').addClass('menu-open-wrapper-page');
    }
   });
