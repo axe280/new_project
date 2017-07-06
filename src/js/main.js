@@ -3,6 +3,13 @@ jQuery(function($){
   $('input[placeholder], textarea[placeholder]').placeholder();
 
 
+  $('.open-modal').magnificPopup({
+    type:'inline',
+    midClick: true
+  });
+
+
+
   // add-open-class
   $('.menu-icon-wrap').click(function(){
    if($(this).parent().is('.menu-mobile-open')){

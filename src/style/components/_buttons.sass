@@ -1,62 +1,62 @@
 /* ------------------- Button styles */
 .btn
-  min-width: 80px
   position: relative
   display: inline-block
   vertical-align: middle
-  padding: 8px 15px
+  min-width: 80px
   margin: 0
-  font: 14px/24px $site-font-family, Arial, sans-serif
-  text-align: center
-  text-decoration: none
-  cursor: pointer
-  outline: none
+  padding: 8px 15px
   border: none
   background-color: $btn-bg-color
-  color: $btn-color
   border-radius: 0
+  font: normal normal 14px/24px $site-font-family, Arial, sans-serif
+  text-align: center
+  text-decoration: none
+  color: $btn-color
+  outline: none
+  cursor: pointer
   &:hover
     background-color: $btn-h-bg-color
-    color: $btn-h-color
     text-decoration: none
-  &:active
-    background-color: $btn-act-bg-color
-    color: $btn-act-color
-    box-shadow: $btn-act-shadow
+    color: $btn-h-color
+
+  &.btn-max
+    width: 100%
+
+  &.btn-sm
+    min-width: 60px
+    padding: 5px 10px
+    font-size: 12px
+
+  &.btn-md
+    min-width: 120px
+    padding: 16px 25px
+    font-size: 18px
+
+  &.btn-lg
+    min-width: 160px
+    padding: 22px 30px
+    font-size: 24px
 
 
-.btn-sm
-  min-width: 60px
-  padding: 5px 10px
-  font-size: 12px
+.btn-icon
+  .icon
+    margin-left: 10px
+    vertical-align: middle
+  span
+    display: inline-block
+    vertical-align: middle
 
-.btn-md
-  min-width: 120px
-  padding: 16px 25px
-  font-size: 18px
-
-.btn-lg
-  padding: 22px 30px
-  min-width: 160px
-  font-size: 24px
 
 .btn-border
-  border: 2px solid $btn-border-color
-  color: $btn-border-text-color
-  background-color: $btn-border-bg
+  border: 1px solid #000
+  background: none
+  color: #000
+  line-height: 22px
   &:hover
-    background-color: $btn-h-border-bg
-    color: $btn-h-border-text-color
-    border-color: $btn-h-border-color
-  &:active
-    background-color: $btn-act-border-bg
-    color: $btn-act-border-text-color
-    border-color: $btn-act-border-color
-    box-shadow: $btn-act-border-shadow
-
-.btn-max
-  width: 100%
-
+    background-color: $btn-bg-color
+    color: $btn-color
+    border-color: $btn-bg-color
 
 
 

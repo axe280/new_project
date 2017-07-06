@@ -33,14 +33,14 @@ var path = {
     html: 'src/*.html',
     js: 'src/js/**/*.*',
     style: 'src/style/main.sass',
-    img: 'src/img/*.*',
+    img: 'src/img/**/*.*',
     fonts: 'src/fonts/**/*.*'
   },
   watch: {
     html: 'src/**/*.html',
     js: 'src/js/**/*.js',
     style: 'src/style/**/*.sass',
-    img: 'src/img/*.*',
+    img: 'src/img/**/*.*',
     fonts: 'src/fonts/**/*.*'
   },
   clean: './build'
@@ -58,7 +58,7 @@ var config = {
 
 
 gulp.task('sprite', function () {
-  var spriteData = gulp.src('src/img/icon/*.png').pipe(spritesmith({
+  var spriteData = gulp.src('src/img/icon/*.*').pipe(spritesmith({
     imgName: 'sprite.png',
     cssName: '_sprite-mixins.sass',
     padding: 2
@@ -80,7 +80,7 @@ gulp.task('svgsprite', function () {
     .pipe(svgmin())
     .pipe(svgstore())
     .pipe(rename({basename: 'sprite_svg'}))
-    .pipe(gulp.dest('./src/img'));
+    .pipe(gulp.dest('./src/img/svg'));
 });
 
 

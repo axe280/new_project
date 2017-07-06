@@ -1,88 +1,179 @@
-/*  ------------------- Page structur */
-.clear 
+/*  ------------------- Page structure */
+.clear
   clear: both
+
 .group:after 
   content: "."
+  clear: both
   display: block
   height: 0
-  clear: both
   visibility: hidden
 
 #wrapper
   position: relative
-  min-width: 320px
-  transition: left 0.2s linear
-  width: 100%
   left: 0
+  min-width: 320px
+  width: 100%
+  transition: left 0.2s linear
+
+.section-st
+  padding: 20px 0
+
+.section-dark
+  background-color: #dddddd
+
+.section-light
+  background-color: #fefefe
 
 .container
-  padding: 0 15px
-  margin: 0 auto
+  padding: 1px 15px
+
+.hidden-mobile,
+.hidden-devices
+  display: none
 
 
 /*  ------------------- Bread crumbs */
 .bread-crumbs
+  padding: 0
+  list-style-type: none
   li
-    list-style-type: none
     display: inline-block
     vertical-align: middle
+    margin: 0
     &:before
       content: '/ '
     &:first-child
       &:before
+        display: none
 
+
+/*  ------------------- Pagination */
+.pagination
+  list-style-type: none
+  li
+    display: inline-block
+    vertical-align: middle
+    margin: 10px 5px
+  a
+    display: block
+    width: 30px
+    height: 30px
+    border-radius: 2px
+    background-color: #f9f9f9
+    line-height: 30px
+    text-align: center
+    text-decoration: none
+
+.pagin-prev,
+.pagin-next
+  a
+    width: auto
+    height: auto
+    border-radius: 0
+    background: none
 
 
 /* ------------------- Header */
 .header
   position: relative
-  background-color: #fff
-  padding: 20px 0
 
 .logo
-  text-align: center
-  margin-bottom: 20px
+  a
+    display: block
+    outline: none
 
 
 /* ------------------- Footer */
 .footer
-  width: 100%
   position: relative
-  min-width: 320px
-  transition: opacity 0.2s linear, margin 0.2s linear
-  opacity: 1
-  margin: 0
   left: 0
+  min-width: 320px
+  width: 100%
+  margin: 0
+  opacity: 1
+  transition: opacity 0.2s linear, margin 0.2s linear
   .container
     overflow: hidden
+
+.copy
+  display: block
+  line-height: 100px
 
 
 /* Min width 768 pixels */
 @media only screen and (min-width: 768px)
-  .half-wrapper-bl
-    .half-one-bl
-      float: left
-      width: 50%
-      padding-right: 10px
-    .half-two-bl
-      float: right
-      width: 50%
-      padding-left: 10px
-  /* end media min width 768 pexels */
+  /*  ------------------- Page structure */
+  .container
+    max-width: 768px
+    margin: 0 auto
+
+  .hidden-mobile
+    display: block
 
 
-/* Min width 980 pixels */
-@media only screen and (min-width: 980px)
-  .logo
-    float: left
-  /* end media min width 980 pexels */
+  /* ------------------- Header */
+  .header
 
 
+  /* ------------------- Footer */
+  .footer
+    background-color: #ccc
+  /* end media min width 768 pixels */
 
 
+/* Min width 1024 pixels */
+@media only screen and (min-width: 1024px)
+  /*  ------------------- Page structure */
+  html, body
+    height: 100%
+
+  #wrapper
+    min-height: 100%
+    margin-bottom: -100px
+
+  .page-buffer
+    height: 100px
+
+  .section-st
+    padding: 70px 0
+
+  .container
+    max-width: 980px
+    padding: 1px 10px
+
+  .hidden-devices
+    display: block
+
+  .hidden-desktop
+    display: none
 
 
+  /* ------------------- Header */
+  .header
 
+
+  /* ------------------- Footer */
+  .footer
+    height: 100px
+    background-color: #ddd
+  /* end media min width 1024 pixels */
+
+
+/* Min width 1224 pixels */
+@media only screen and (min-width: 1224px)
+  /*  ------------------- Page structure */
+  .container
+    max-width: 1190px
+
+  /* ------------------- Header */
+  .header
+
+
+  /* ------------------- Footer */
+  .footer
+    background-color: #ddd
+  /* end media min width 1224 pixels */
 
 
 

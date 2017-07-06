@@ -5,39 +5,62 @@
   box-sizing: border-box
 
 body
+  width: 100%
+  margin: 0
+  padding: 0
   background-color: #fff
   font: $site-text-size $site-font-family, Arial, sans-serif
   line-height: 20px
   color: $site-text-color
-  margin: 0
-  padding: 0
-  width: 100%
 
-h1, .site-h1-tt, h2, .site-h2-tt, h3, .site-h3-tt, h4, .site-h4-tt, h5, .site-h5-tt
+h1, .site-h1-tt, h2, .site-h2-tt, h3, .site-h3-tt, h4, .site-h4-tt, h5, .site-h5-tt, h6, .site-h6-tt
   display: block
-  font-family: $site-font-family, Arial, sans-serif
-  line-height: 1.1em
-  color: $site-title-color
+  margin: 20px 0
   padding: 0
-  margin: 0 0 20px
+  font-family: $site-font-family, Arial, sans-serif
+  font-weight: 700
+  line-height: 1.2em
+  color: $site-title-color
 
 h1, .site-h1-tt
   font-size: $site-h1-size-mobile
+
 h2, .site-h2-tt
   font-size: $site-h2-size-mobile
+
 h3, .site-h3-tt
   font-size: $site-h3-size-mobile
+
 h4, .site-h4-tt
   font-size: $site-h4-size-mobile
+
 h5, .site-h5-tt
   font-size: $site-h5-size-mobile
 
+h6, .site-h6-tt
+  font-size: $site-h6-size-mobile
+
+ul, ol
+  margin: 20px 0
+  padding: 0
+  list-style-position: inside
+
+li
+  margin: 10px 0
+  padding: 0
+
+p
+  margin: 20px 0
+
 .text-center
   text-align: center
+
 .text-left
   text-align: left
+
 .text-right
   text-align: right
+
 .text-uppercase
   text-transform: uppercase
 
@@ -52,25 +75,10 @@ a
     text-decoration: none
     color: $color-h-link
 
+.st-inner-block-text
+  margin: 40px 0
+  border: 1px solid #000
 
-table, .table
-  display: table
-  width: 100%
-  border-collapse: collapse
-  border: 1px solid $table-border-color
-  text-align: center
-  th, td,
-  .th, .td
-    border-collapse: collapse
-    vertical-align: middle
-    padding: 10px
-    border: 1px solid
-  th, .th
-    background-color: $table-th-bg-color
-    border-color: $table-th-border-color
-  td, .td
-    background-color: $table-td-bg-color
-    border-color: $table-td-border-color
 
 
 /* Min width 768 pixels */
@@ -90,7 +98,10 @@ table, .table
   h5, .site-h5-tt
     font-size: $site-h5-size
 
-  /* end media min width 768 pexels */
+  h6, .site-h6-tt
+    font-size: $site-h6-size
+
+  /* end media min width 768 pixels */
 
 
 

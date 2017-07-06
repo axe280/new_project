@@ -1,186 +1,50 @@
-/*
-  SASS variables are information about icon's compiled state, stored under its original file name
-
-  .icon-home
-    width: $icon-home-width
-
-  The large array-like variables contain all information about a single icon
-  $icon-home: x y offset_x offset_y width height total_width total_height image_path
-
-  At the bottom of this section, we provide information about the spritesheet itself
-  $spritesheet: width height image $spritesheet-sprites
-  */
-$icon-cart-h-name: 'icon-cart-h'
-$icon-cart-h-x: 0px
-$icon-cart-h-y: 0px
-$icon-cart-h-offset-x: 0px
-$icon-cart-h-offset-y: 0px
-$icon-cart-h-width: 34px
-$icon-cart-h-height: 37px
-$icon-cart-h-total-width: 126px
-$icon-cart-h-total-height: 99px
-$icon-cart-h-image: 'sprite.png'
-$icon-cart-h: (0px, 0px, 0px, 0px, 34px, 37px, 126px, 99px, 'sprite.png', 'icon-cart-h', )
-$icon-cart-min-name: 'icon-cart-min'
-$icon-cart-min-x: 0px
-$icon-cart-min-y: 79px
-$icon-cart-min-offset-x: 0px
-$icon-cart-min-offset-y: -79px
-$icon-cart-min-width: 18px
-$icon-cart-min-height: 20px
-$icon-cart-min-total-width: 126px
-$icon-cart-min-total-height: 99px
-$icon-cart-min-image: 'sprite.png'
-$icon-cart-min: (0px, 79px, 0px, -79px, 18px, 20px, 126px, 99px, 'sprite.png', 'icon-cart-min', )
-$icon-close-name: 'icon-close'
-$icon-close-x: 109px
-$icon-close-y: 33px
-$icon-close-offset-x: -109px
-$icon-close-offset-y: -33px
-$icon-close-width: 12px
-$icon-close-height: 12px
-$icon-close-total-width: 126px
-$icon-close-total-height: 99px
-$icon-close-image: 'sprite.png'
-$icon-close: (109px, 33px, -109px, -33px, 12px, 12px, 126px, 99px, 'sprite.png', 'icon-close', )
-$icon-day-name: 'icon-day'
-$icon-day-x: 74px
-$icon-day-y: 21px
-$icon-day-offset-x: -74px
-$icon-day-offset-y: -21px
-$icon-day-width: 33px
-$icon-day-height: 19px
-$icon-day-total-width: 126px
-$icon-day-total-height: 99px
-$icon-day-image: 'sprite.png'
-$icon-day: (74px, 21px, -74px, -21px, 33px, 19px, 126px, 99px, 'sprite.png', 'icon-day', )
-$icon-f-md-name: 'icon-f-md'
-$icon-f-md-x: 0px
-$icon-f-md-y: 39px
-$icon-f-md-offset-x: 0px
-$icon-f-md-offset-y: -39px
-$icon-f-md-width: 22px
-$icon-f-md-height: 38px
-$icon-f-md-total-width: 126px
-$icon-f-md-total-height: 99px
-$icon-f-md-image: 'sprite.png'
-$icon-f-md: (0px, 39px, 0px, -39px, 22px, 38px, 126px, 99px, 'sprite.png', 'icon-f-md', )
-$icon-f-sm-name: 'icon-f-sm'
-$icon-f-sm-x: 109px
-$icon-f-sm-y: 0px
-$icon-f-sm-offset-x: -109px
-$icon-f-sm-offset-y: 0px
-$icon-f-sm-width: 17px
-$icon-f-sm-height: 31px
-$icon-f-sm-total-width: 126px
-$icon-f-sm-total-height: 99px
-$icon-f-sm-image: 'sprite.png'
-$icon-f-sm: (109px, 0px, -109px, 0px, 17px, 31px, 126px, 99px, 'sprite.png', 'icon-f-sm', )
-$icon-hot-name: 'icon-hot'
-$icon-hot-x: 74px
-$icon-hot-y: 42px
-$icon-hot-offset-x: -74px
-$icon-hot-offset-y: -42px
-$icon-hot-width: 33px
-$icon-hot-height: 19px
-$icon-hot-total-width: 126px
-$icon-hot-total-height: 99px
-$icon-hot-image: 'sprite.png'
-$icon-hot: (74px, 42px, -74px, -42px, 33px, 19px, 126px, 99px, 'sprite.png', 'icon-hot', )
-$icon-inst-md-name: 'icon-inst-md'
-$icon-inst-md-x: 36px
-$icon-inst-md-y: 0px
-$icon-inst-md-offset-x: -36px
-$icon-inst-md-offset-y: 0px
-$icon-inst-md-width: 36px
-$icon-inst-md-height: 34px
-$icon-inst-md-total-width: 126px
-$icon-inst-md-total-height: 99px
-$icon-inst-md-image: 'sprite.png'
-$icon-inst-md: (36px, 0px, -36px, 0px, 36px, 34px, 126px, 99px, 'sprite.png', 'icon-inst-md', )
-$icon-inst-sm-name: 'icon-inst-sm'
-$icon-inst-sm-x: 24px
-$icon-inst-sm-y: 39px
-$icon-inst-sm-offset-x: -24px
-$icon-inst-sm-offset-y: -39px
-$icon-inst-sm-width: 29px
-$icon-inst-sm-height: 28px
-$icon-inst-sm-total-width: 126px
-$icon-inst-sm-total-height: 99px
-$icon-inst-sm-image: 'sprite.png'
-$icon-inst-sm: (24px, 39px, -24px, -39px, 29px, 28px, 126px, 99px, 'sprite.png', 'icon-inst-sm', )
-$icon-min-arrow-bottom-name: 'icon-min-arrow-bottom'
-$icon-min-arrow-bottom-x: 109px
-$icon-min-arrow-bottom-y: 58px
-$icon-min-arrow-bottom-offset-x: -109px
-$icon-min-arrow-bottom-offset-y: -58px
-$icon-min-arrow-bottom-width: 9px
-$icon-min-arrow-bottom-height: 6px
-$icon-min-arrow-bottom-total-width: 126px
-$icon-min-arrow-bottom-total-height: 99px
-$icon-min-arrow-bottom-image: 'sprite.png'
-$icon-min-arrow-bottom: (109px, 58px, -109px, -58px, 9px, 6px, 126px, 99px, 'sprite.png', 'icon-min-arrow-bottom', )
-$icon-min-arrow-pink-name: 'icon-min-arrow-pink'
-$icon-min-arrow-pink-x: 109px
-$icon-min-arrow-pink-y: 47px
-$icon-min-arrow-pink-offset-x: -109px
-$icon-min-arrow-pink-offset-y: -47px
-$icon-min-arrow-pink-width: 7px
-$icon-min-arrow-pink-height: 9px
-$icon-min-arrow-pink-total-width: 126px
-$icon-min-arrow-pink-total-height: 99px
-$icon-min-arrow-pink-image: 'sprite.png'
-$icon-min-arrow-pink: (109px, 47px, -109px, -47px, 7px, 9px, 126px, 99px, 'sprite.png', 'icon-min-arrow-pink', )
-$icon-min-arrow-top-name: 'icon-min-arrow-top'
-$icon-min-arrow-top-x: 109px
-$icon-min-arrow-top-y: 66px
-$icon-min-arrow-top-offset-x: -109px
-$icon-min-arrow-top-offset-y: -66px
-$icon-min-arrow-top-width: 9px
-$icon-min-arrow-top-height: 6px
-$icon-min-arrow-top-total-width: 126px
-$icon-min-arrow-top-total-height: 99px
-$icon-min-arrow-top-image: 'sprite.png'
-$icon-min-arrow-top: (109px, 66px, -109px, -66px, 9px, 6px, 126px, 99px, 'sprite.png', 'icon-min-arrow-top', )
-$icon-new-name: 'icon-new'
-$icon-new-x: 74px
-$icon-new-y: 0px
-$icon-new-offset-x: -74px
-$icon-new-offset-y: 0px
-$icon-new-width: 33px
-$icon-new-height: 19px
-$icon-new-total-width: 126px
-$icon-new-total-height: 99px
-$icon-new-image: 'sprite.png'
-$icon-new: (74px, 0px, -74px, 0px, 33px, 19px, 126px, 99px, 'sprite.png', 'icon-new', )
-$spritesheet-width: 126px
-$spritesheet-height: 99px
+// SASS variables are information about icon's compiled state, stored under its original file name
+//
+// .icon-home
+//   width: $icon-home-width
+//
+// The large array-like variables contain all information about a single icon
+// $icon-home: x y offset_x offset_y width height total_width total_height image_path
+//
+// At the bottom of this section, we provide information about the spritesheet itself
+// $spritesheet: width height image $spritesheet-sprites
+$icon-right-name: 'icon-right'
+$icon-right-x: 0px
+$icon-right-y: 0px
+$icon-right-offset-x: 0px
+$icon-right-offset-y: 0px
+$icon-right-width: 52px
+$icon-right-height: 8px
+$icon-right-total-width: 52px
+$icon-right-total-height: 8px
+$icon-right-image: 'sprite.png'
+$icon-right: (0px, 0px, 0px, 0px, 52px, 8px, 52px, 8px, 'sprite.png', 'icon-right', )
+$spritesheet-width: 52px
+$spritesheet-height: 8px
 $spritesheet-image: 'sprite.png'
-$spritesheet-sprites: ($icon-cart-h, $icon-cart-min, $icon-close, $icon-day, $icon-f-md, $icon-f-sm, $icon-hot, $icon-inst-md, $icon-inst-sm, $icon-min-arrow-bottom, $icon-min-arrow-pink, $icon-min-arrow-top, $icon-new, )
-$spritesheet: (126px, 99px, 'sprite.png', $spritesheet-sprites, )
+$spritesheet-sprites: ($icon-right, )
+$spritesheet: (52px, 8px, 'sprite.png', $spritesheet-sprites, )
 
-/*
-  The provided mixins are intended to be used with the array-like variables
-
-  .icon-home
-    @include sprite-width($icon-home)
-
-  .icon-email
-    @include sprite($icon-email)
-
-  Example usage in HTML:
-    `display: block` sprite:
-    <div class="icon-home"></div>
-
-  To change `display` (e.g. `display: inline-block;`), we suggest using a common CSS class:
-    // CSS
-    .icon {
-      display: inline-block;
-    }
-
-    // HTML
-    <i class="icon icon-home"></i>
-  */
+// The provided mixins are intended to be used with the array-like variables
+//
+// .icon-home
+//   @include sprite-width($icon-home)
+//
+// .icon-email
+//   @include sprite($icon-email)
+//
+// Example usage in HTML:
+//   `display: block` sprite:
+//   <div class="icon-home"></div>
+//
+// To change `display` (e.g. `display: inline-block;`), we suggest using a common CSS class:
+//   // CSS
+//   .icon {
+//     display: inline-block;
+//   }
+//
+//   // HTML
+//   <i class="icon icon-home"></i>
 @mixin sprite-width($sprite)
   width: nth($sprite, 5)
 
@@ -194,7 +58,7 @@ $spritesheet: (126px, 99px, 'sprite.png', $spritesheet-sprites, )
 
 @mixin sprite-image($sprite)
   $sprite-image: nth($sprite, 9)
-  background-image: url(#{$sprite-image})
+  background-image: url(../img/#{$sprite-image})
 
 @mixin sprite($sprite)
   @include sprite-image($sprite)
@@ -202,12 +66,10 @@ $spritesheet: (126px, 99px, 'sprite.png', $spritesheet-sprites, )
   @include sprite-width($sprite)
   @include sprite-height($sprite)
 
-/*
-  The `sprites` mixin generates identical output to the CSS template
-    but can be overridden inside of SASS
-
-  @include sprites($spritesheet-sprites)
-  */
+// The `sprites` mixin generates identical output to the CSS template
+//   but can be overridden inside of SASS
+//
+// @include sprites($spritesheet-sprites)
 @mixin sprites($sprites)
   @each $sprite in $sprites
     $sprite-name: nth($sprite, 10)
