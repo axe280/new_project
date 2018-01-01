@@ -1,0 +1,82 @@
+<form action="#" class="st-form">
+  <span class="st-form__tt title-site--h2">Form</span>
+  <div class="form-group">
+    <label for="formName" class="form-group__label">Text</label>
+    <input id="formName" class="form-group__field" type="text" placeholder="Your name" required>
+  </div>
+
+  <div class="form-group">
+    <label for="formPassword" class="form-group__label">Password</label>
+    <input id="formPassword" class="form-group__field" type="password" placeholder="Password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Не менее восьми символов, содержащих хотя бы одну цифру и символы из верхнего и нижнего регистра" required>
+  </div>
+
+
+  <div class="form-group form-group--inline">
+    <label for="formEmail" class="form-group__label">E-mail</label>
+    <input id="formEmail" class="form-group__field" type="email" placeholder="E-mail" pattern="[^@]+@[^@]+\.[a-zA-Z]{2,6}" required>
+  </div>
+
+  <div class="form-group form-group--inline">
+    <label for="formPhone" class="form-group__label">Phone number long string</label>
+    <input id="formPhone" class="form-group__field mask-phone" type="tel" placeholder="+7" required>
+  </div>
+
+
+  <div class="form-group-grid">
+    <div class="form-group form-group-grid__half-col">
+      <label for="formSearch" class="form-group__label">Search</label>
+      <input id="formSearch" class="form-group__field" type="search" placeholder="Search">
+    </div>
+
+    <div class="form-group form-group-grid__half-col">
+      <label for="formUrl" class="form-group__label">Website</label>
+      <input id="formUrl" class="form-group__field" type="url" placeholder="Url your website" pattern="(http|https)://.+">
+    </div>
+  </div>
+
+
+  <div class="form-group-grid">
+    <div class="form-group form-group-grid__three-col">
+      <label class="form-group__label">Text</label>
+      <input class="form-group__field" type="text" placeholder="Your name" required>
+    </div>
+
+    <div class="form-group form-group-grid__three-col">
+      <label class="form-group__label">Text</label>
+      <input class="form-group__field" type="text" placeholder="Your name" required>
+    </div>
+
+    <div class="form-group form-group-grid__three-col">
+      <label class="form-group__label">Text</label>
+      <input class="form-group__field" type="text" placeholder="Your name" required>
+    </div>
+  </div>
+
+
+  <div class="form-group-grid">
+    <div class="form-group form-group-grid__four-col">
+      <label class="form-group__label">Text</label>
+      <input class="form-group__field" type="text" placeholder="Your name" required>
+    </div>
+
+    <div class="form-group form-group-grid__four-col">
+      <label class="form-group__label">Text</label>
+      <input class="form-group__field" type="text" placeholder="Your name" required>
+    </div>
+
+    <div class="form-group form-group-grid__four-col">
+      <label class="form-group__label">Text</label>
+      <input class="form-group__field" type="text" placeholder="Your name" required>
+    </div>
+
+    <div class="form-group form-group-grid__four-col">
+      <label class="form-group__label">Text</label>
+      <input class="form-group__field" type="text" placeholder="Your name" required>
+    </div>
+  </div>
+
+
+  <div class="form-group text--center">
+    <button class="btn btn--md btn--min-width" type="submit">Submit</button>
+  </div>
+</form>

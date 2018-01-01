@@ -1,66 +1,86 @@
-/* ------------------- Button styles */
+/* ----- Button styles ----------------- */
 .btn
   position: relative
   display: inline-block
   vertical-align: middle
-  min-width: 80px
   margin: 0
   padding: 8px 15px
   border: none
-  background-color: $btn-bg-color
-  border-radius: 0
   font: normal normal 14px/24px $site-font-family, Arial, sans-serif
   text-align: center
   text-decoration: none
-  color: $btn-color
+  border-radius: 5px
   outline: none
   cursor: pointer
+  color: #fff
+  background-color: $btn-style-color
   &:hover
-    background-color: $btn-h-bg-color
     text-decoration: none
-    color: $btn-h-color
+    color: $btn-color-hover
+    background-color: lighten($btn-style-color, 5%)
 
-  &.btn-max
-    width: 100%
+  &--second-st
+    background-color: $btn-style-second-color
+    &:hover
+      background-color: lighten($btn-style-second-color, 5%)
 
-  &.btn-sm
-    min-width: 60px
-    padding: 5px 10px
-    font-size: 12px
-
-  &.btn-md
-    min-width: 120px
-    padding: 16px 25px
-    font-size: 18px
-
-  &.btn-lg
-    min-width: 160px
-    padding: 22px 30px
-    font-size: 24px
-
-
-.btn-icon
-  .icon
-    margin-left: 10px
-    vertical-align: middle
-  span
+  &__icon-text
     display: inline-block
     vertical-align: middle
 
+  &__icon
+    width: 20px
+    height: 20px
+    display: inline-block
+    vertical-align: middle
+    border: 1px solid #000
+    font-style: normal
+    &--right
+      margin-left: 5px
+    &--left
+      margin-right: 5px
 
-.btn-border
-  border: 1px solid #000
-  background: none
-  color: #000
-  line-height: 22px
-  &:hover
-    background-color: $btn-bg-color
-    color: $btn-color
-    border-color: $btn-bg-color
+  &--border
+    border: 1px solid $btn-style-color
+    background: transparent
+    color: $btn-style-color
+    line-height: 22px
+    &:hover
+      color: $btn-color-hover
+    &.btn--second-st
+      border-color: $btn-style-second-color
+      color: $btn-style-second-color
+      &:hover
+        color: $btn-color-hover
+
+  &--min-width
+    min-width: 110px
+
+  &--max
+    width: 100%
+
+  &--sm
+    padding: 5px 10px
+    font-size: 12px
+    &.btn--min-width
+      min-width: 80px
+
+  &--md
+    padding: 16px 25px
+    font-size: 18px
+    &.btn--min-width
+      min-width: 140px
+
+  &--lg
+    padding: 22px 30px
+    font-size: 24px
+    &.btn--min-width
+      min-width: 180px
 
 
-
-
+/* ----- END Buttons ------------------- */
+/*                                       */
+/*                                       */
 
 
 

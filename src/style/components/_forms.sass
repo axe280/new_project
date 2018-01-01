@@ -1,61 +1,90 @@
-/* ------------------- Form styles */
+/* ----- Forms ------------------------- */
 .st-form
-  margin: 20px 0
+  margin-bottom: 20px
+
+.st-form__tt
+  display: block
 
 .form-group
-  margin: 20px 0
+  margin-bottom: 20px
 
-.form-label-tt
-  display: block
-  margin: 10px 0
+  &__label
+    display: block
+    margin-bottom: 10px
+    font-size: 14px
+    line-height: 18px
 
-.form-group-inline
-  display: flex
-  justify-content: space-between
-  align-items: center
-  .form-label-tt
-    min-width: 120px
-    max-width: 120px
-    line-height: 20px
-    padding: 10px 0
-    margin: 0
+  &--inline
+    display: flex
+    justify-content: space-between
+    align-items: center
+    .form-group__label
+      min-width: 140px
+      max-width: 140px
+      padding: 0 10px 0 0
+      margin: 5px 0
 
 .placeholder
-  color: #000
+  color: #444
+
+input, textarea
+  +placeholder-color(#444)
 
 ::-webkit-contacts-auto-fill-button
   opacity: 0
 
-input,
+input[type="password"]::-webkit-contacts-auto-fill-button
+  opacity: 1
+
+input[type="text"],
+input[type="password"],
+input[type="search"],
+input[type="email"],
+input[type="url"],
+input[type="range"],
+input[type="tel"],
 textarea
-  +placeholder-color(#000)
-  border-radius: 0
-  padding: 0 15px
-  height: 40px
   position: relative
-  outline: none
+  height: 40px
+  width: 100%
+  padding: 0 15px
+  border: 1px solid #000
   font: 14px $site-font-family, Arial, sans-serif
   color: #000
   background-color: #fff
-  border: 1px solid #e0e0e0
+  outline: none
+  border-radius: 5px
+  -webkit-appearance: none
+  box-shadow: none
   &:hover
-    border-color: #e0e0e0
+    border-color: rgba(#000, 0.5)
   &:focus
-    border-color: #e0e0e0
-
-input[type="text"],
-input[type="password"]
-  width: 100%
+    border-color: rgba(#000, 0.2)
 
 textarea
-  height: 130px
-  width: 100%
   vertical-align: top
+  height: 130px
   padding: 10px 15px
   resize: none
 
 
 
+/* Min width 768 pixels */
+@media only screen and (min-width: 768px)
+  .form-group-grid
+    display: flex
+    justify-content: space-between
+    &__half-col
+      width: 48.5%
+    &__three-col
+      width: 31.3%
+    &__four-col
+      width: 22.8%
+  /* end media min width 768 pixels */
 
+
+/* ----- END Forms --------------------- */
+/*                                       */
+/*                                       */
 
 

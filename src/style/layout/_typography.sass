@@ -1,4 +1,4 @@
-/* ------------------- Typography */
+/* ----- Typography -------------------- */
 *
   -webkit-box-sizing: border-box
   -moz-box-sizing: border-box
@@ -13,55 +13,73 @@ body
   line-height: 20px
   color: $site-text-color
 
-h1, .site-h1-tt, h2, .site-h2-tt, h3, .site-h3-tt, h4, .site-h4-tt, h5, .site-h5-tt, h6, .site-h6-tt
+h1, .title-site--h1, h2, .title-site--h2, h3, .title-site--h3, h4, .title-site--h4, h5, .title-site--h5, h6, .title-site--h6
   display: block
-  margin: 20px 0
+  margin: 0 0 15px
   padding: 0
   font-family: $site-font-family, Arial, sans-serif
   font-weight: 700
   line-height: 1.2em
   color: $site-title-color
 
-h1, .site-h1-tt
+h1, .title-site--h1
   font-size: $site-h1-size-mobile
+  margin-bottom: 20px
 
-h2, .site-h2-tt
+h2, .title-site--h2
   font-size: $site-h2-size-mobile
+  margin-bottom: 20px
 
-h3, .site-h3-tt
+h3, .title-site--h3
   font-size: $site-h3-size-mobile
 
-h4, .site-h4-tt
+h4, .title-site--h4
   font-size: $site-h4-size-mobile
 
-h5, .site-h5-tt
+h5, .title-site--h5
   font-size: $site-h5-size-mobile
+  line-height: 1.3em
 
-h6, .site-h6-tt
+h6, .title-site--h6
   font-size: $site-h6-size-mobile
+  line-height: 1.3em
 
 ul, ol
-  margin: 0 0 20px
+  list-style-type: none
+  margin: 0
   padding: 0
-  list-style-position: inside
 
 li
-  margin: 0 0 10px
+  margin: 0
   padding: 0
 
 p
   margin: 0 0 20px
 
-.text_center
+.text-bl
+  ul
+    margin-bottom: 20px
+    list-style-type: disc
+    padding-left: 15px
+
+  ol
+    margin-bottom: 20px
+    list-style-type: decimal
+    padding-left: 15px
+
+  li
+    margin-bottom: 10px
+
+.text--center
   text-align: center
 
-.text_left
+.text--left
   text-align: left
 
-.text_right
+.text--right
   text-align: right
 
-.text_uppercase
+.text--uppercase
   text-transform: uppercase
 
 img
@@ -75,35 +93,38 @@ a
     text-decoration: none
     color: $color-h-link
 
-.st-inner-block-text
-  margin: 40px 0
-  border: 1px solid #000
-
 
 
 /* Min width 768 pixels */
 @media only screen and (min-width: 768px)
-  h1, .site-h1-tt
+  h1, .title-site--h1
     font-size: $site-h1-size
 
-  h2, .site-h2-tt
+  h2, .title-site--h2
     font-size: $site-h2-size
 
-  h3, .site-h3-tt
+  h3, .title-site--h3
     font-size: $site-h3-size
 
-  h4, .site-h4-tt
+  h4, .title-site--h4
     font-size: $site-h4-size
 
-  h5, .site-h5-tt
+  h5, .title-site--h5
     font-size: $site-h5-size
 
-  h6, .site-h6-tt
+  h6, .title-site--h6
     font-size: $site-h6-size
 
+  .text-bl-grid
+    display: flex
+    justify-content: space-between
+    &__half-col
+      width: 48%
   /* end media min width 768 pixels */
 
-
+/* ----- END Typography ---------------- */
+/*                                       */
+/*                                       */
 
 
 

@@ -1,4 +1,4 @@
-/*  ------------------- Page structure */
+/* ----- Page structure ---------------- */
 .clear
   clear: both
 
@@ -19,62 +19,68 @@
 .section-st
   padding: 20px 0
 
-.section-dark
-  background-color: #dddddd
+.section-st--dark
+  background-color: #f3f3f3
 
-.section-light
+.section-st--light
   background-color: #fefefe
 
 .container
-  padding: 1px 15px
+  padding-left: 15px
+  padding-right: 15px
 
 .hidden-mobile,
 .hidden-devices
   display: none
 
 
-/*  ------------------- Bread crumbs */
-.bread-crumbs
-  padding: 0
-  list-style-type: none
-  li
-    display: inline-block
-    vertical-align: middle
-    margin: 0
-    &:before
-      content: '/ '
-    &:first-child
-      &:before
-        display: none
 
-
-/*  ------------------- Pagination */
-.pagination
-  list-style-type: none
-  li
-    display: inline-block
-    vertical-align: middle
-    margin: 10px 5px
-  a
+/* Min width 768 pixels */
+@media only screen and (min-width: 768px)
+  .hidden-mobile
     display: block
-    width: 30px
-    height: 30px
-    border-radius: 2px
-    background-color: #f9f9f9
-    line-height: 30px
-    text-align: center
-    text-decoration: none
-
-.pagin-prev,
-.pagin-next
-  a
-    width: auto
-    height: auto
-    border-radius: 0
-    background: none
+  /* end media min width 768 pixels */
 
 
-/* ------------------- Header */
+
+
+/* Min width 1024 pixels */
+@media only screen and (min-width: 1024px)
+  html, body
+    height: 100%
+
+  #wrapper
+    min-height: 100%
+    margin-bottom: -140px
+
+  .page-buffer
+    height: 140px
+
+  .section-st
+    padding: 50px 0
+
+  .footer
+    height: 140px
+
+  .container
+    max-width: 980px
+    padding-left: 10px
+    padding-right: 10px
+    margin: 0 auto
+
+  .hidden-devices
+    display: block
+
+  .hidden-desktop
+    display: none
+  /* end media min width 1024 pixels */
+
+
+
+/* ----- END Page structure ------------ */
+/*                                       */
+/*                                       */
+/* ----- Header ------------------------ */
 .header
   position: relative
 
@@ -83,97 +89,16 @@
     display: block
     outline: none
 
-
-/* ------------------- Footer */
+/* ----- END Header -------------------- */
+/*                                       */
+/*                                       */
+/* ----- Footer ------------------------ */
 .footer
-  position: relative
-  left: 0
-  min-width: 320px
-  width: 100%
-  margin: 0
-  opacity: 1
-  transition: opacity 0.2s linear, margin 0.2s linear
-  .container
-    overflow: hidden
+  padding: 20px 0
 
-.copy
-  display: block
-  line-height: 100px
-
-
-/* Min width 768 pixels */
-@media only screen and (min-width: 768px)
-  /*  ------------------- Page structure */
-  .container
-    max-width: 768px
-    margin: 0 auto
-
-  .hidden-mobile
-    display: block
-
-
-  /* ------------------- Header */
-  .header
-
-
-  /* ------------------- Footer */
-  .footer
-    background-color: #ccc
-  /* end media min width 768 pixels */
-
-
-/* Min width 1024 pixels */
-@media only screen and (min-width: 1024px)
-  /*  ------------------- Page structure */
-  html, body
-    height: 100%
-
-  #wrapper
-    min-height: 100%
-    margin-bottom: -100px
-
-  .page-buffer
-    height: 100px
-
-  .section-st
-    padding: 70px 0
-
-  .container
-    max-width: 980px
-    padding: 1px 10px
-
-  .hidden-devices
-    display: block
-
-  .hidden-desktop
-    display: none
-
-
-  /* ------------------- Header */
-  .header
-
-
-  /* ------------------- Footer */
-  .footer
-    height: 100px
-    background-color: #ddd
-  /* end media min width 1024 pixels */
-
-
-/* Min width 1224 pixels */
-@media only screen and (min-width: 1224px)
-  /*  ------------------- Page structure */
-  .container
-    max-width: 1190px
-
-  /* ------------------- Header */
-  .header
-
-
-  /* ------------------- Footer */
-  .footer
-    background-color: #ddd
-  /* end media min width 1224 pixels */
+/* ----- END Footer -------------------- */
+/*                                       */
+/*                                       */
 
 
 
